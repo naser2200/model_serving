@@ -8,11 +8,11 @@ import keystoneclient.v3.client as ksclient
 from keystoneauth1 import loading
 from keystoneauth1 import session
 
-flavor = "ssc" 
-private_net = "SNIC Network"
+flavor = "ssc.medium" 
+private_net = "UPPMAX 2023/1-1 Internal IPv4 Network"
 floating_ip_pool_name = None
 floating_ip = None
-image_name = "image-id"
+image_name = "Ubuntu 22.04 - 2023.01.07"
 
 identifier = random.randint(1000,9999)
 
