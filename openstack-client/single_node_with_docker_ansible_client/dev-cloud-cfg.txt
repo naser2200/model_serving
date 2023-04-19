@@ -1,13 +1,13 @@
 #cloud-config
 
-
 users:
  - name: appuser
    sudo: ALL=(ALL) NOPASSWD:ALL
    home: /home/appuser
    shell: /bin/bash
    ssh_authorized_keys:
-     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDw3qnR1irPiv3fts6L8Q8KRzeCKHtISbJvkjR/0BqrMUEj0VgMDOwFeWEoNepjScvvTEXJL/xUEQqUsnOcRicaDOxcKgp12ZAmL9g5ifSYrwM+3q7L6WcbXDzw8Jr+F2UPpnVt7F3h/xfi45DmoBDr7OCe4DwJNRNKroauQGnjkf7Afa1Gup4yi7QT7wUIc8Upfp0MfimxS4QIkEgAD+SNl2i7zBMY1QnLD7qbNSed6onMx3+5R3UQrhQ9UbWcl4/h7B86RGE5cryzR6pBSkGswA+inF26z0G0uEnkOHTx2L3nAT9knCnyTBLc4UpSnPzu9hPhSzewOEYltlZJRDYJ ubuntu@salman-toor-client
-
+     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC2soQIFwapjDZbcpC7SZ+87+EXF5o8eZPBNB1VztXkhJ7Nrk89QrpzJ6Qe+Bq30VnYzg2pOz4AlcHX/dhgA2YdCEail5YU+TRADc+2DFog+A0ibRwxHUc1fzE89OPn2OB1K0Vljka4I+2Lf3ugSvX1n8EGET0FPhYDBdf6/he433AwDcKteQraQKwt0tZGvrp4U/aZoTBsAt2FDKpFbgPhz5DIyNJzdAtcau3weh55jlZLlyGDIj8XWI9DxrxULGBTSeLjXAoKI0EyfBoxdkURLhB870oVx5GEVOPrGd+lgiQLfySqim8VJyBU0QTqP5lTXrJM6ta1mZOJE4C/PTPj+YAmgz1Xf84/bLjFZBpjnA2kiMpn9qugDHAK+QSJosaPo3gkMcFlMPi7bTs1nAc/x0EPBPrXzqAQ4dqA8qeRej1RKcDb85Xl2y/kO1ckLnmFDTOFCf5NlXLXNGskfmhWztI1/5I9NaTD6PW0RR76miX8hymfyZ75VmH8F27tgs= ubuntu@naser-shabani4971
+  
+  
 byobu_default: system
 
