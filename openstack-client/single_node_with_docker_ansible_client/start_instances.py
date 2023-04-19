@@ -59,7 +59,7 @@ secgroups = ['default']
 
 print ("Creating instances ... ")
 instance_prod = nova.servers.create(name="Nash-prod_server_with_docker_"+str(identifier), image=image, flavor=flavor, key_name='cluster-key',userdata=userdata_prod, nics=nics,security_groups=secgroups)
-instance_dev = nova.servers.create(name="Nash-dev_server_"+str(identifier), image=image, flavor=flavor, key_name='<cluster-key>',userdata=userdata_dev, nics=nics,security_groups=secgroups)
+instance_dev = nova.servers.create(name="Nash-dev_server_"+str(identifier), image=image, flavor=flavor, key_name='cluster-key',userdata=userdata_dev, nics=nics,security_groups=secgroups)
 inst_status_prod = instance_prod.status
 inst_status_dev = instance_dev.status
 
