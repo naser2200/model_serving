@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-env
+  labels:
+    app: dev-env
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-env
+  template:
+    metadata:
+      labels:
+        app: dev-env
+    spec:
+      containers:
+        - name: my-app-dev
+          image: my-docker-image:dev
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: dev-env-config
+            - secretRef:
+                name: dev-env-secrets
