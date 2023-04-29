@@ -1,0 +1,26 @@
+#cloud-config
+
+apt:
+  update: true
+  upgrade: true
+
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+
+write_files:
+  - path: /etc/apt/sources.list.d/kubernetes.list
+    content: |
+      deb http://apt.kubernetes.io/ kubernetes-xenial main
+    owner: root:root
+    permissions: '0644'
+
+runcmd:
+  - echo "adding kubernetes GPG key"
+  - curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  - echo "installing kubeadm, kubelet, and kubectl"
+  - apt-get update -y
+  - apt-get install -y kubelet kubeadm kubectl
+  - apt-mark hold kubelet kubeadm kubectl

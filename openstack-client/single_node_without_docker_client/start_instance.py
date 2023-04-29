@@ -42,11 +42,11 @@ else:
 
 #print("Path at terminal when executing this file")
 #print(os.getcwd() + "\n")
-cfg_file_path =  os.getcwd()+'/cloud-cfg.txt'
+cfg_file_path =  os.getcwd()+'/cloud-config-k8s.txt'
 if os.path.isfile(cfg_file_path):
     userdata = open(cfg_file_path)
 else:
-    sys.exit("cloud-cfg.txt is not in current working directory")
+    sys.exit("cloud-config-k8s.txt is not in current working directory")
 
 secgroups = ['default']
 
@@ -54,7 +54,7 @@ print ("Creating instance ... ")
 #instance = nova.servers.create(name="Naser_Shabani"+str(identifier), image=image, flavor=flavor,userdata=userdata, nics=nics,security_groups=secgroups)
 
 # incase you want to login to the production server 
-instance = nova.servers.create(name="Naser_Shabani"+str(identifier), image=image, flavor=flavor, key_name='id_rsa',userdata=userdata, nics=nics,security_groups=secgroups)
+instance = nova.servers.create(name="Naser_Shabani-k8s"+str(identifier), image=image, flavor=flavor, key_name='id_rsa',userdata=userdata, nics=nics,security_groups=secgroups)
 inst_status = instance.status
 print ("waiting for 10 seconds.. ")
 time.sleep(10)
